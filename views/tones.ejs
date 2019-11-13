@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tone Analysis</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white"/>
+  <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+  <link rel="manifest" href="/manifest.json">
+</head>
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/tones">Tone Analysis</a></li>
+  <li><a href="/comments">Comments</a></li>
+</ul> 
+<body class="fullscreen">
+  <div class="container">
+    <h1 class="title">Tone Analysis</h1>
+    <h2><%=JSON.stringify(text_tone['doc_tone'])%></h2>
+    <h2><%=JSON.stringify(text_tone['sentences'])%></h2>
+    <table>
+    <%text_tone['sentences'].forEach((item) => {%>
+      <tr>
+        <td><%=item%></td>
+      </tr>
+    <%})%>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+}
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+  text-align: center;
+}
+.comment_container {
+  margin: auto;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.title {
+  font-size: 3rem;
+}
+.name{
+  float: left;
+}
+.tone{
+  float: right;
+}
+.comment{
+  border-top-style: solid;
+}
+.comment_box{
+  height: 150px;
+  border-style: ridge;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}

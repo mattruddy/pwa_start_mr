@@ -25,12 +25,12 @@ console.log("UNCOMMENT HTTP STUFF BEFORE PUSHING");
 
 const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
-const toneAnalyzer = new ToneAnalyzerV3({
+/*const toneAnalyzer = new ToneAnalyzerV3({
 	version: '',
 	username: '',
 	password: '',
 	url: 'https://gateway.watsonplatform.net/tone-analyzer/api'
-});
+});*/
 
 var text_tone = {
 	name: name,
@@ -40,7 +40,7 @@ var text_tone = {
 var curr_docs = {};
 var Cloudant = require('@cloudant/cloudant');
 
-/*cloudant = Cloudant("");
+/*cloudant = Cloudant("https://0ec7cd4c-48d4-42e1-9f09-f63e1622f78e-bluemix:630e8f71457423bf586a43c1fc65165708db339e76a1937a955508a1a3459fa4@0ec7cd4c-48d4-42e1-9f09-f63e1622f78e-bluemix.cloudantnosqldb.appdomain.cloud");
 mydb = cloudant.db.use('test');
  
 mydb.list({ include_docs: true }, function(err, body) {
@@ -59,7 +59,7 @@ app.get('/myform', function(req, res){
     	content_type: 'application/json',
     };
 
-	toneAnalyzer.tone(toneParams, function(req, res2){
+	/*toneAnalyzer.tone(toneParams, function(req, res2){
         test_res_tone = res2;
         console.log(test_res_tone);
         try{
@@ -82,7 +82,7 @@ app.get('/myform', function(req, res){
 		res.render('tones',{text_tone:text_tone});
 		mydb.insert(text_tone);
 		console.log(text_tone);
-	});
+	});*/
 }); 
 
 app.get('/', function(req, res) {
@@ -97,8 +97,6 @@ app.get('/tones', function(req, res) {
     res.render('tones', {text_tone:text_tone});
 });
 app.listen(8080);
-
-
 
 
 
